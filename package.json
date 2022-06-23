@@ -19,6 +19,9 @@
     "@angular/platform-browser": "~11.2.4",
     "@angular/platform-browser-dynamic": "~11.2.4",
     "@angular/router": "~11.2.4",
+    "@ngxs/logger-plugin": "^3.7.4-dev.master-770aa34",
+    "@ngxs/store": "^3.7.4-dev.master-770aa34",
+    "bootstrap": "^5.1.3",
     "rxjs": "~6.6.0",
     "tslib": "^2.0.0",
     "zone.js": "~0.11.3"
