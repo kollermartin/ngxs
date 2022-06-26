@@ -1,4 +1,4 @@
-import { Action, Selector, State, StateContext } from "@ngxs/store";
+import { Action, createSelector, Selector, State, StateContext } from "@ngxs/store";
 import { AddUser } from "../actions/user.action";
 import { User } from "../models/user";
 
@@ -18,6 +18,12 @@ export class UserState{
     @Selector()
     static getUsers(state: UserStateModel) {
         return state.users;
+    }
+
+    static getUser(id: string) {
+        return createSelector([UserState], (state: UserStateModel) => {
+            return state.users.find(user => user.id === id);
+        });
     }
 
     @Action(AddUser)
